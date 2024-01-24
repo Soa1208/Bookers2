@@ -1,11 +1,14 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <h1>User show</h1>
 <% @books.each do |book| %>
   <p><%= image_tag @user.get_profile_image %></p>
   <p>Title</p>
   <%= book.title %>
   <p>Opinion</p>
-  <%= book.opinion %>
+  <%= book.body %>
 <% end %>
 
-<%= render 'list' %>
 <%= render 'books/list' %>

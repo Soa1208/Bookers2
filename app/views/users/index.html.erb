@@ -1,4 +1,4 @@
-<h1>User　index</h1>
+<h1>User index</h1>
 
 <% @users.each do |user| %>
     <p><%= image_tag user.get_profile_image %></p>
@@ -6,5 +6,4 @@
     <p><%= link_to "show", user_path(user) %></p>
 <% end %>
 
-<%= render 'list' %>
 <%= render 'books/list' %>

@@ -1,10 +1,19 @@
-<h1>Book　index</h1>
+<% if @book.errors.any? %>
+  <%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>Book index</h1>
 
 <% @books.each do |book| %>
   <div>
-    <%= image_tag book.user.profile_image %>
+    <%= image_tag book.user.get_profile_image %>
     <p>Title：<%= link_to book.title, book_path(book) %></p>
-    <p>Opinion：<%= book.opinion %></p>
+    <p>Opinion：<%= book.body %></p>
     <p>ユーザーネーム：<%= book.user.name %></p>
   </div>
 <% end %>

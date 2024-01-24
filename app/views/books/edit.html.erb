@@ -1,10 +1,19 @@
-<h1>Bookedit</h1>
+<h1>Book edit</h1>
+
+<% if @book.errors.any? %>
+  <%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_with model: @book do |f| %>
     <p>Title</p>
     <%= f.text_field :title %>
     <p>Body</p>
-    <%= f.text_area :opinion %>
+    <%= f.text_area :body %>
     <%= f.submit 'Update Book' %>
 <% end %>
     
