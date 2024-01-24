@@ -2,7 +2,11 @@
 <%= image_tag @user.get_profile_image %>
 <p>name：<%= @user.name %></p>
 <p>introduction：<%= @user.introduction %></p>
-
+<% if @user == current_user %>
+  <p><%= link_to "Edit", edit_user_path(@user) %></p>
+<% else %>
+  <p><%= link_to "Go current_user", user_path(current_user) %></p>
+<% end %>
 
 新規投稿フォーム
 <%= form_with model: book do |f| %>
