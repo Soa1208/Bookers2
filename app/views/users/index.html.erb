@@ -6,4 +6,7 @@
     <p><%= link_to "show", user_path(user) %></p>
 <% end %>
 
-<%= render 'books/list' %>
+
+
+<!--投稿フォーム-->
+<%= render 'books/list', book: @book %>

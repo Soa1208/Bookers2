@@ -18,4 +18,6 @@
   <p><%= link_to "Destroy", book_path(@book), method: :delete %></p>
 <% end %>
 
-<%= render 'list' %>
+
+<!--投稿フォーム-->
+<%= render 'list', book: @book_new, user: @user %>
