@@ -1,1 +1,6 @@
 @use '~bootstrap/scss/bootstrap';
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+}

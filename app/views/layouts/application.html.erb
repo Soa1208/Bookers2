@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/225b9663bb.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header class="shadow-sm">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar navbar-dark">
         <div class="container">
           <div class="nav-item">
-                <%= link_to "Bookers", root_path %>
+            <a href="/">Bookers</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -55,9 +55,14 @@
         </div>
       </nav>
     </header>
-    
     <footer>
-      <p>CopyRight Infratop.inc</p>
+      <div clas="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
     </footer>
   <%= yield %>
   </body>
