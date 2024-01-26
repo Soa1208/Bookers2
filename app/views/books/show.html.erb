@@ -10,10 +10,10 @@
       <table class="table">
        <thead>
         <tr>
-         <td><p><%= link_to image_tag(@book.user.get_profile_image), user_path(@book.user.id) %></p></td>
+         <td><p><%= link_to image_tag(@book.user.get_profile_image), user_path(@book.user) %></p></td>
          <td><p><%= link_to @book.title, book_path(@book) %></p></td>
          <td><p><%= @book.body %></p></td>
-         <td><p><%= link_to @book.user.name, user_path(@book.user.id) %></p></td>
+         <td><p><%= link_to @book.user.name, user_path(@book.user) %></p></td>
          <td>
             <% if @book.user == current_user %>
               <p><%= link_to "Edit", edit_book_path(@book) %></p>
